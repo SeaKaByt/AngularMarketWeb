@@ -1,0 +1,58 @@
+<div class="ui center aligned basic segments">
+
+  <div class="ui right fixed vertical menu">
+    <a class="item" (click)=" openCreateModal()">
+      Create a New Market record
+    </a>
+  </div>
+  <div class="ui horizontal divider">Search</div>
+
+
+  <div class="ui grid">
+    <div class="four wide column">
+      <div class="ui left fixed vertical menu">
+        <a class="ui primary basic button" href="#Region">
+          Search by Region
+        </a>
+        <a class="ui primary basic button" href="#District">
+          Search by District
+        </a>
+        <a class="ui primary basic button" href="#Market">
+          Search by Market
+        </a>
+        <a class="ui primary basic button" href="#Address">
+          Search by Address
+        </a>
+      </div>
+    </div>
+
+    <div class="ten wide column">
+      <div class="item" id="Region">
+        <p>
+          <app-search-market searchType="Region" (deleteEvent)="deleteEventReceiver($event)"
+            (editEvent)="editEventReceiver($event)"></app-search-market>
+        </p>
+      </div>
+      <div class="item" id="District">
+        <p>
+          <app-search-market searchType="District" (deleteEvent)="deleteEventReceiver($event)"
+            (editEvent)="editEventReceiver($event)"></app-search-market>
+        </p>
+      </div>
+      <div class="item" id="Market">
+        <p>
+          <app-search-market searchType="Market" (deleteEvent)="deleteEventReceiver($event)"
+            (editEvent)="editEventReceiver($event)"></app-search-market>
+        </p>
+      </div>
+      <div class="item" id="Address">
+        <p>
+          <app-search-market searchType="Address" (deleteEvent)="deleteEventReceiver($event)"
+            (editEvent)="editEventReceiver($event)"></app-search-market>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="top">Back to Top </a>
+</div>
